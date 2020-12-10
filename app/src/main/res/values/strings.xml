@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Library Management</string>
+    <string name="nothing_to_show">Nothing To Show</string>
+    <string name="fetching">Fetching</string>
+    <string name="name">Name</string>
+    <string name="username">User Name</string>
+    <string name="lend">Lend</string>
+    <string name="return_book">Return</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="book">Book</string>
+    <string name="publication">Publications</string>
+    <string name="author">Author</string>
+    <string name="user">User</string>
+    <string name="current">Current</string>
+    <string name="returned">Returned</string>
+    <string name="available">Available</string>
+    <string name="book_name">Book Name</string>
+    <string name="publication_name">Publication Name</string>
+    <string name="author_name">Author Name</string>
+    <string name="book_desc">Book Description</string>
+    <string name="category">Category</string>
+    <string name="save">Save</string>
+    <string name="add_book">Add Book</string>
+    <string name="add_publication">Add Publication</string>
+    <string name="add_author">Add Author</string>
+    <string name="add_user">Add User</string>
+    <string name="search_here">Search Here</string>
+</resources>

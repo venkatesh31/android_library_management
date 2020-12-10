@@ -1,0 +1,60 @@
+def AAVersion = '4.6.0'
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "com.example.library"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["androidManifestFile": "$projectDir/src/main/AndroidManifest.xml".toString()]
+            }
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "6g"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-beta01'
+    implementation 'com.google.android.material:material:1.2.1'
+    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
+    implementation "org.androidannotations:androidannotations-api:$AAVersion"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'io.reactivex:rxandroid:1.2.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.0'
+    implementation "androidx.constraintlayout:constraintlayout:2.1.0-alpha1"
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation group: 'com.cloudinary', name: 'cloudinary-android', version: '1.28.2'
+
+
+}

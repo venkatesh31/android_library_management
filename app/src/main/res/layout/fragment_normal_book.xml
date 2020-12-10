@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <lecho.lib.hellocharts.view.PieChartView
+            android:id="@+id/chart"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchEditText"
+                android:layout_toStartOf="@+id/searchButton"
+                android:layout_marginTop="10dp"
+                android:hint="@string/search_here"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_alignParentEnd="true"
+                android:layout_width="70dp"
+                android:layout_margin="10dp"
+                android:background="@color/primaryColor"
+                android:tint="@color/white"
+                android:src="@drawable/ic_baseline_search_24"
+                android:layout_height="70dp"/>
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bookList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal" />
+
+        <include
+            android:id="@+id/noDataView"
+            layout="@layout/no_data_view"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
